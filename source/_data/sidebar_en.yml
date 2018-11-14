@@ -1,0 +1,88 @@
+-
+  title: "INTRODUCTION"
+  list:
+    -
+      title: "Documentation Introduction"
+      path: "/introduction/index.html"
+    -
+      title: "Windows SDK Introduction"
+      path: "/introduction/windows_sdk_introduction.html"
+    -
+      title: "SDK Architectural Overview"
+      path: "/introduction/sdk_architectural_overview.html"
+-
+  title: "Get Started Immediately"
+  list:
+    -
+      title: "Run Sample Application"
+      path: "/quick-start/index.html"
+-
+  title: "CONCEPTS TO UNDERSTAND"
+  list:
+    -
+      title: "Flight Control"
+      path: "/introduction/flightController_concepts.html"
+    -
+      title: "Camera Exposure"
+      path: "/introduction/camera_concepts.html"
+-
+  title: "GUIDES"
+
+  list:
+    -
+      title: "Flight Controller"
+      path: "/introduction/component-guide-flightController.html"
+    -
+      title: "Camera"
+      path: "/introduction/component-guide-camera.html"
+    -
+      title: "Gimbal"
+      path: "/introduction/component-guide-gimbal.html"
+    -
+      title: "AirLink"
+      path: "/introduction/component-guide-airlink.html"
+    -
+      title: "Remote Controller"
+      path: "/introduction/component-guide-remotecontroller.html"
+    -
+      title: "Smart Battery"
+      path: "/introduction/component-guide-battery.html"
+    -
+      title: "Missions"
+      path: "/introduction/component-guide-missions.html"
+    -
+      title: "SDK Manager"
+      path: "/introduction/sdk-guide-sdkmanager.html"
+-
+  title: "DEVELOPMENT WORKFLOW"
+  list:
+    -
+      title: "Prerequisites"
+      path: "/application-development-workflow/workflow-prerequisits.html"
+    -
+      title: "Register as DJI Developer & Download SDK"
+      path: "/application-development-workflow/workflow-register.html"
+    -
+      title: "Integrate SDK into Application"
+      path: "/application-development-workflow/workflow-integrate.html"
+    -
+      title: "Run Application"
+      path: "/application-development-workflow/workflow-run.html"
+    -
+      title: "Testing, Profiling & Debugging"
+      path: "/application-development-workflow/workflow-testing.html"
+    -
+      title: "Deploy"
+      path: "/application-development-workflow/workflow-deploy.html"
+-
+  title: "TUTORIALS"
+  list:
+    -
+      title: "Camera Application"
+      path: "/tutorials/index.html"
+-
+  title: "Support"
+  list:
+     -
+       title: "FAQ"
+       path: "/faq/index.html"

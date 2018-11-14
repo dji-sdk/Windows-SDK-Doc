@@ -1,0 +1,44 @@
+title: DJI Windows SDK Documentation
+description:
+author:
+language:
+  - en
+  - cn
+i18n_dir: :lang
+timezone: UTC
+root: /
+default_layout: page
+highlight:
+  enable: true
+  line_number: false
+  tab_replace: true
+
+sdk: "windows-sdk"
+
+theme: dji-doc
+
+markdown:
+  render:
+    html: true
+  anchors:
+    level: 2
+    permalink: false
+
+node_sass:
+  outputStyle: nested
+  precision: 5
+  sourceComments: false
+
+jade:
+  pretty: true
+
+uglify:
+  mangle: true
+
+clean_css:
+  exclude:
+
+html_minifier:
+  exclude:
+
+

@@ -1,0 +1,60 @@
+nav:
+  sdk: "SDK"
+  mobile_sdk: "Mobile SDK"
+  onboard_sdk: "Onboard SDK"
+  guidance_sdk: "Guidance SDK"
+  payload_sdk: "Payload SDK"
+  ux_sdk: "UX SDK"
+  windows_sdk: "Windows SDK"
+  mobile-sdk: "Mobile SDK"
+  onboard-sdk: "Onboard SDK"
+  guidance-sdk: "Guidance SDK"
+  payload-sdk: "Payload SDK"
+  products: "Products"
+  info: "Info"
+  showcase: "Showcase"
+  support: "Support"
+  news: "News"
+  community: "Community"
+  forum: "Forum"
+  github: "GitHub"
+  stackoverflow: "Stack Overflow"
+  youtube: "YouTube"
+  twitter: "Twitter"
+  login: "Login"
+  register: "Register"
+  logout: "Logout"
+  user: "User Center"
+  dji: "DJI"
+  dji_store: "DJI Online Store"
+  contact_us: "Contact Us"
+  contact_us_bd: "Business Cooperation"
+  copyright: "Copyright © 2018 DJI All Rights Reserved"
+
+sub_nav:
+  overview: Overview
+  features: Features
+  documentation: Documentation
+  downloads: Downloads
+  support: Support
+  api_reference: API Reference
+  ios_reference: IOS SDK
+  android_reference: Android SDK
+  ios_uilib: IOS UX SDK
+  android_uilib: Android UX SDK
+
+policies:
+  privacy: Privacy Policy
+  terms: Terms of Use
+
+doc:
+  search_holder: 'Search Documentation'
+  search_title_mobile: 'Search Mobile SDK Document'
+  search_title_guidance: 'Search Guidance SDK Document'
+  search_title_onboard: 'Search Onboard SDK Document'
+  results: 'Results'
+  notfound: 'Not Found'
+
+btn:
+  load_more: 'Load More'
+  loading: 'Loading...'

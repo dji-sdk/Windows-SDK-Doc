@@ -1,0 +1,11 @@
+db.json
+debug.log
+.DS_Store
+npm-debug.log
+
+.tmp/
+node_modules/
+dist/
+dist-bak/
+public/
+*.sh

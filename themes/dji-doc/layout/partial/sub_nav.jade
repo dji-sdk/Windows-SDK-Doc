@@ -1,0 +1,10 @@
+.sub-nav(data-offset-top='60', data-spy='affix')
+  .container
+    h1.logo= __('nav.' + config.sdk)
+    nav
+      a(href=url('#{config.sdk}'))= __('sub_nav.overview')
+      a.active(href=url('#{config.sdk}/documentation'))= __('sub_nav.documentation')
+      a(href=url('/windows-api-reference/index.html'))=__('sub_nav.api_reference')
+      a(href=url('#{config.sdk}/downloads'))= __('sub_nav.downloads')
+      if config.sdk == 'windows-sdk'
+        a(href=url('#{config.sdk}/support'))= __('sub_nav.support')
