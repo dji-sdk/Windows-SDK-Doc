@@ -51,11 +51,11 @@ Now, let's install the **DJISDK.framework** in the Xcode project using Cocoapods
    
  **1**. Let's open the `FPVDemo.xcworkspace` file in Xcode and open the Main.storyboard, add a new View Controller and set **DJICameraViewController** as the **Class** for it:
   
-  ![rootController](../images/tutorials-and-samples/iOS/FPVDemo/rootController.png)
+  ![rootController](../images/tutorials-and-samples/FPVDemo/rootController.png)
   
 Add a UIView inside the View Controller. Then, add two UIButtons and one UISegmentedControl at the bottom of the View Controller as shown below:
   
-  ![Storyboard](../images/tutorials-and-samples/iOS/FPVDemo/Storyboard.png)
+  ![Storyboard](../images/tutorials-and-samples/FPVDemo/Storyboard.png)
   
   Go to "DJICameraViewController.m" file and import the **DJISDK** and **DJIVideoPreviewer** header files. Next implement four delegate protocols and set the IBOutlets and IBActions for the UI we just create in Main.storyboard as shown below:
   
@@ -200,7 +200,7 @@ Please check this [Connect Mobile Device and Run Application](../application-dev
 
 If you can see the live video stream in the application, congratulations! Let's move forward.
 
-  ![fpv](../images/tutorials-and-samples/iOS/FPVDemo/fpv.jpg)
+  ![fpv](../images/tutorials-and-samples/FPVDemo/fpv.jpg)
 
 ## Implementing the Capture function
 
@@ -438,7 +438,7 @@ We can update the bool value for `isRecording` and `currentRecordTimeLabel`'s te
    
   Now, let's build and run the project and check the functions. You can try to play with the **Record** and **Switch Camera WorkMode** functions, if everything goes well, you should see the screenshot like this:
    
-  ![Screenshot](../images/tutorials-and-samples/iOS/FPVDemo/record_screenshot.jpg)
+  ![Screenshot](../images/tutorials-and-samples/FPVDemo/record_screenshot.jpg)
    
   Congratulations! Your Aerial FPV iOS app is complete, you can now use this app to control the camera of your Mavic Pro. 
 
