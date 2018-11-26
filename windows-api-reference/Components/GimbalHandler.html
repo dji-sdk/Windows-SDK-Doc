@@ -130,48 +130,44 @@
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">GimbalHandler</span></span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description">Description:</h5>
-<p><font color="#666">Gimbal Handler.</font></p>
+<p><font color="#666">Handler.</font></p>
 <h5 id="class-members">Class Members:</h5>
-<div class="api-row" id="value_gimbalresetcommandmsg"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#value_gimbalresetcommandmsg_inline">GimbalResetCommandMsg</a></div></div><div class="inline-doc" id="value_gimbalresetcommandmsg_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">property </font>GimbalResetCommandMsg</h6></div>
+<div class="api-row" id="value_gimbalresetcommandmsg"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_gimbalresetcommandmsg_inline">GimbalResetCommandMsg</a></div></div><div class="inline-doc" id="value_gimbalresetcommandmsg_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>GimbalResetCommandMsg</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> GimbalResetCommandMsg</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
 <h5 id="description-v2">Description:</h5>
 <p><font color="#666">A class that contains a reset command type of gimbals.</font></p>
-<h5 id="see-also">See Also:</h5>
-<p><font color="#666"><code><a href="../Components/GimbalHandler.html#value_gimbalresetcommandmsg">GimbalResetCommandMsg</a></code></font></p>
-</div>
-<div class="api-row" id="value_gimbalanglerotation"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#value_gimbalanglerotation_inline">GimbalAngleRotation</a></div></div><div class="inline-doc" id="value_gimbalanglerotation_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">property </font>GimbalAngleRotation</h6></div>
+<h5 id="struct-members">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalresetcommandmsg_value_inline"></a> <font color="#000">GimbalResetCommand value</font></font></td><td><font color="#666">The actual value of the class.</font></td></tr></table></html></div>
+<div class="api-row" id="value_gimbalanglerotation"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_gimbalanglerotation_inline">GimbalAngleRotation</a></div></div><div class="inline-doc" id="value_gimbalanglerotation_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>GimbalAngleRotation</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> GimbalAngleRotation</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
 <h5 id="description-v3">Description:</h5>
 <p><font color="#666">A class that used to control the gimbal to rotate a specific angle.</font></p>
-<h5 id="see-also-v2">See Also:</h5>
-<p><font color="#666"><code><a href="../Components/GimbalHandler.html#value_gimbalanglerotation">GimbalAngleRotation</a></code></font></p>
-</div>
-<div class="api-row" id="value_gimbalspeedrotation"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#value_gimbalspeedrotation_inline">GimbalSpeedRotation</a></div></div><div class="inline-doc" id="value_gimbalspeedrotation_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">property </font>GimbalSpeedRotation</h6></div>
+<h5 id="struct-members-v2">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalanglerotation_mode_inline"></a> <font color="#000">GimbalAngleRotationMode mode</font></font></td><td><font color="#666">The rotation mode, either it is relative or absolute.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalanglerotation_pitch_inline"></a> <font color="#000">double pitch</font></font></td><td><font color="#666">The pitch property of a gimbal rotation operation, how much the gimbal rotates on the pitch axis.  It only takes effect when <code><a href="../Components/GimbalHandler.html#value_gimbalanglerotation_pitchignored">bool pitchIgnored</a></code> is false.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalanglerotation_roll_inline"></a> <font color="#000">double roll</font></font></td><td><font color="#666">The roll property of a gimbal rotation operation, how much the gimbal rotates on the pitch axis.  It only takes effect when <code><a href="../Components/GimbalHandler.html#value_gimbalanglerotation_rollignored">bool rollIgnored</a></code> is false.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalanglerotation_yaw_inline"></a> <font color="#000">double yaw</font></font></td><td><font color="#666">The yaw property of a gimbal rotation operation, how much the gimbal rotates on the pitch axis.  It only takes effect when <code><a href="../Components/GimbalHandler.html#value_gimbalanglerotation_yawignored">bool yawIgnored</a></code> is false.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalanglerotation_pitchignored_inline"></a> <font color="#000">bool pitchIgnored</font></font></td><td><font color="#666">true to ignore the pitch value of this rotation so that the gimbal will not rotate pitch.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalanglerotation_rollignored_inline"></a> <font color="#000">bool rollIgnored</font></font></td><td><font color="#666">true to ignore the roll value of this rotation so that the gimbal will not rotate roll.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalanglerotation_yawignored_inline"></a> <font color="#000">bool yawIgnored</font></font></td><td><font color="#666">true to ignore the yaw value of this rotation so that the gimbal will not rotate yaw.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalanglerotation_duration_inline"></a> <font color="#000">double duration</font></font></td><td><font color="#666">The duration for the rotation operation. A longer duration can slower the rotation.</font></td></tr></table></html></div>
+<div class="api-row" id="value_gimbalspeedrotation"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_gimbalspeedrotation_inline">GimbalSpeedRotation</a></div></div><div class="inline-doc" id="value_gimbalspeedrotation_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>GimbalSpeedRotation</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> GimbalSpeedRotation</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
 <h5 id="description-v4">Description:</h5>
 <p><font color="#666">A class that used to control the gimbal to rotate in a specific speed.</font></p>
-<h5 id="see-also-v3">See Also:</h5>
-<p><font color="#666"><code><a href="../Components/GimbalHandler.html#value_gimbalspeedrotation">GimbalSpeedRotation</a></code></font></p>
-</div>
-<div class="api-row" id="value_gimbalcalibrationstate"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#value_gimbalcalibrationstate_inline">GimbalCalibrationState</a></div></div><div class="inline-doc" id="value_gimbalcalibrationstate_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">property </font>GimbalCalibrationState</h6></div>
+<h5 id="struct-members-v3">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalspeedrotation_pitch_inline"></a> <font color="#000">double pitch</font></font></td><td><font color="#666">The speed on the pitch dimension.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalspeedrotation_yaw_inline"></a> <font color="#000">double yaw</font></font></td><td><font color="#666">The speed on the yaw dimension.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalspeedrotation_roll_inline"></a> <font color="#000">double roll</font></font></td><td><font color="#666">The speed on the roll dimension.</font></td></tr></table></html></div>
+<div class="api-row" id="value_gimbalcalibrationstate"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_gimbalcalibrationstate_inline">GimbalCalibrationState</a></div></div><div class="inline-doc" id="value_gimbalcalibrationstate_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>GimbalCalibrationState</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> GimbalCalibrationState</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
 <h5 id="description-v5">Description:</h5>
 <p><font color="#666">The calibration state, which contains the status and the progress if valid.</font></p>
-<h5 id="see-also-v4">See Also:</h5>
-<p><font color="#666"><code><a href="../Components/GimbalHandler.html#value_gimbalcalibrationstate">GimbalCalibrationState</a></code></font></p>
-</div>
+<h5 id="struct-members-v4">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalcalibrationstate_status_inline"></a> <font color="#000">GimbalCalibrationStatus status</font></font></td><td><font color="#666">The calibration status.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalcalibrationstate_progress_inline"></a> <font color="#000">int progress</font></font></td><td><font color="#666">The calibration progress in percentage. It is valid when <code><a href="../Components/GimbalHandler.html#value_gimbalcalibrationstate_status">GimbalCalibrationStatus status</a></code> is <code><a href="../Components/GimbalHandler.html#value_gimbalcalibrationstatus_in_progress">IN_PROGRESS</a></code>.</font></td></tr></table></html></div>
 <div class="api-row" id="value_gimbalresetcommand"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_gimbalresetcommand_inline">GimbalResetCommand</a></div></div><div class="inline-doc" id="value_gimbalresetcommand_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">enum </font>GimbalResetCommand</h6></div>
 
@@ -181,16 +177,15 @@
 <p><font color="#666">Commands to reset the gimbal to some specific attitude.</font></p>
 <h5 id="enum-members">Enum Members:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalresetcommand_toggle_pitch_inline"></a>TOGGLE_PITCH</font></td><td><font color="#666">Toggles gimbal's pitch position, either point forward or point to the ground.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalresetcommand_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">Unknown.</font></td></tr></table></html></div>
-<div class="api-row" id="value_gimbalattituderange"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#value_gimbalattituderange_inline">GimbalAttitudeRange</a></div></div><div class="inline-doc" id="value_gimbalattituderange_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">property </font>GimbalAttitudeRange</h6></div>
+<div class="api-row" id="value_gimbalattituderange"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">struct</div><div class="api-col right"><a class="trigger" href="#value_gimbalattituderange_inline">GimbalAttitudeRange</a></div></div><div class="inline-doc" id="value_gimbalattituderange_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">struct </font>GimbalAttitudeRange</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> GimbalAttitudeRange</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK</font></td></tr></table></html>
 <h5 id="description-v7">Description:</h5>
 <p><font color="#666">The valid range of attitudes supported by the connected gimbal.</font></p>
-<h5 id="see-also-v5">See Also:</h5>
-<p><font color="#666"><code><a href="../Components/GimbalHandler.html#value_gimbalattituderange">GimbalAttitudeRange</a></code></font></p>
-</div>
+<h5 id="struct-members-v5">Struct Members:</h5>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalattituderange_roll_inline"></a> <font color="#000">DoubleMinMax roll</font></font></td><td><font color="#666">The valid range in roll axis in degrees.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalattituderange_pitch_inline"></a> <font color="#000">DoubleMinMax pitch</font></font></td><td><font color="#666">The valid range in pitch axis in degrees.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalattituderange_yaw_inline"></a> <font color="#000">DoubleMinMax yaw</font></font></td><td><font color="#666">The valid range in yaw axis in degrees.</font></td></tr></table></html></div>
 <div class="api-row" id="value_gimbalmode"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">enum</div><div class="api-col right"><a class="trigger" href="#value_gimbalmode_inline">GimbalMode</a></div></div><div class="inline-doc" id="value_gimbalmode_inline" <blockquote="">
 <div class="article"><h6><font color="#AAA">enum </font>GimbalMode</h6></div>
 
@@ -218,16 +213,16 @@
 <p><font color="#666">The calibration satus of gimbals.</font></p>
 <h5 id="enum-members-v4">Enum Members:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalcalibrationstatus_idle_inline"></a>IDLE</font></td><td><font color="#666">The gimbal is idle.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalcalibrationstatus_in_progress_inline"></a>IN_PROGRESS</font></td><td><font color="#666">The calibration is in progress.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalcalibrationstatus_failed_inline"></a>FAILED</font></td><td><font color="#666">The calibration failed.</font></td></tr><tr valign="top"><td><font color="#70BF41"><a href="#value_gimbalcalibrationstatus_unknown_inline"></a>UNKNOWN</font></td><td><font color="#666">Unknown.</font></td></tr></table></html></div>
-<div class="api-row" id="gimbalhandler_productindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">unknown</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_productindex_inline"></a></div></div><div class="inline-doc" id="gimbalhandler_productindex_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">unknown </font></h6></div>
+<div class="api-row" id="gimbalhandler_productindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_productindex_inline">ProductIndex</a></div></div><div class="inline-doc" id="gimbalhandler_productindex_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">property </font>ProductIndex</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">uint</span> ProductIndex &#123; <span class="keyword">get</span>; &#125;</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v11">Description:</h5>
 <p><font color="#666">The index of the product to which this component handler belongs. The default product index is 0.</font></p>
 </div>
-<div class="api-row" id="gimbalhandler_componentindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">unknown</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_componentindex_inline"></a></div></div><div class="inline-doc" id="gimbalhandler_componentindex_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">unknown </font></h6></div>
+<div class="api-row" id="gimbalhandler_componentindex"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">property</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_componentindex_inline">ComponentIndex</a></div></div><div class="inline-doc" id="gimbalhandler_componentindex_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">property </font>ComponentIndex</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">uint</span> ComponentIndex &#123; <span class="keyword">get</span>; &#125;</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
@@ -266,7 +261,7 @@
 <h5 id="description-v16">Description:</h5>
 <p><font color="#666">Resets the gimbal. The gimbal will have different behaviors with different gimbal reset modes.</font></p>
 <h5 id="input-parameters">Input Parameters:</h5>
-<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">GimbalResetCommandMsg <font color="#000">value</font></font></td><td><font color="#666"><i>A parameter object of type GimbalResetCommandMsg.</i></font></td></tr></table></html>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../Components/GimbalHandler.html#value_gimbalresetcommandmsg">GimbalResetCommandMsg</a> <font color="#000">value</font></font></td><td><font color="#666"><i>A parameter object of type GimbalResetCommandMsg.</i></font></td></tr></table></html>
 <h5 id="return">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;<a href="../SDKManager/DJISDKManager.html#value_sdkerror">SDKError</a>&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;SDKErrorCode&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="gimbalhandler_getgimbalattitudeasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_getgimbalattitudeasync_inline">GetGimbalAttitudeAsync</a></div></div><div class="inline-doc" id="gimbalhandler_getgimbalattitudeasync_inline" <blockquote="">
@@ -295,7 +290,7 @@
 <h5 id="description-v19">Description:</h5>
 <p><font color="#666">Rotate gimbal's pitch, roll, and yaw to the specific angle.</font></p>
 <h5 id="input-parameters-v2">Input Parameters:</h5>
-<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">GimbalAngleRotation <font color="#000">value</font></font></td><td><font color="#666"><i>A parameter object of type GimbalAngleRotation.</i></font></td></tr></table></html>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../Components/GimbalHandler.html#value_gimbalanglerotation">GimbalAngleRotation</a> <font color="#000">value</font></font></td><td><font color="#666"><i>A parameter object of type GimbalAngleRotation.</i></font></td></tr></table></html>
 <h5 id="return-v4">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;<a href="../SDKManager/DJISDKManager.html#value_sdkerror">SDKError</a>&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;SDKErrorCode&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="gimbalhandler_rotatebyspeedasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_rotatebyspeedasync_inline">RotateBySpeedAsync</a></div></div><div class="inline-doc" id="gimbalhandler_rotatebyspeedasync_inline" <blockquote="">
@@ -306,7 +301,7 @@
 <h5 id="description-v20">Description:</h5>
 <p><font color="#666">Rotate gimbal's pitch, roll, and yaw in a specific speed.</font></p>
 <h5 id="input-parameters-v3">Input Parameters:</h5>
-<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">GimbalSpeedRotation <font color="#000">value</font></font></td><td><font color="#666"><i>A parameter object of type GimbalSpeedRotation.</i></font></td></tr></table></html>
+<html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41"><a href="../Components/GimbalHandler.html#value_gimbalspeedrotation">GimbalSpeedRotation</a> <font color="#000">value</font></font></td><td><font color="#666"><i>A parameter object of type GimbalSpeedRotation.</i></font></td></tr></table></html>
 <h5 id="return-v5">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;<a href="../SDKManager/DJISDKManager.html#value_sdkerror">SDKError</a>&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;SDKErrorCode&gt;</code> object.</i></font></td></tr></table></html></div>
 <div class="api-row" id="gimbalhandler_calibrategimbalasync"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">method</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_calibrategimbalasync_inline">CalibrateGimbalAsync</a></div></div><div class="inline-doc" id="gimbalhandler_calibrategimbalasync_inline" <blockquote="">
@@ -354,48 +349,48 @@
 <p><font color="#666">Gets the serial number of the component.</font></p>
 <h5 id="return-v10">Return:</h5>
 <html><table class="table-inline-parameters"><tr valign="top"><td><font color="#70BF41">async Task&lt;ResultValue&lt;StringMsg?&gt;&gt;</font></td><td><font color="#666"><i>A <code>Task&lt;ResultValue&lt;StringMsg?&gt;&gt;</code> object.</i></font></td></tr></table></html></div>
-<div class="api-row" id="gimbalhandler_gimbalattitudechangedpushevent"><div class="api-col left">Event</div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_gimbalattitudechangedpushevent_inline">AttitudeChangedEventHandler</a></div></div><div class="inline-doc" id="gimbalhandler_gimbalattitudechangedpushevent_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">event </font>AttitudeChangedEventHandler</h6></div>
+<div class="api-row" id="gimbalhandler_gimbalattitudechangedpushevent"><div class="api-col left">Event</div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_gimbalattitudechangedpushevent_inline">GimbalAttitudeChanged</a></div></div><div class="inline-doc" id="gimbalhandler_gimbalattitudechangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>GimbalAttitudeChanged</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> AttitudeChangedEventHandler GimbalAttitudeChanged</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v26">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the gimbal's attitude.</font></p>
 </div>
-<div class="api-row" id="gimbalhandler_yawrelativetobodyheadingchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_yawrelativetobodyheadingchangedpushevent_inline">DoubleMsgChangedEventHandler</a></div></div><div class="inline-doc" id="gimbalhandler_yawrelativetobodyheadingchangedpushevent_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">event </font>DoubleMsgChangedEventHandler</h6></div>
+<div class="api-row" id="gimbalhandler_yawrelativetobodyheadingchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_yawrelativetobodyheadingchangedpushevent_inline">YawRelativeToBodyHeadingChanged</a></div></div><div class="inline-doc" id="gimbalhandler_yawrelativetobodyheadingchangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>YawRelativeToBodyHeadingChanged</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> DoubleMsgChangedEventHandler YawRelativeToBodyHeadingChanged</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v27">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the gimbal's yaw relative to the aircraft's heading.</font></p>
 </div>
-<div class="api-row" id="gimbalhandler_gimbalattituderangechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_gimbalattituderangechangedpushevent_inline">GimbalAttitudeRangeChangedEventHandler</a></div></div><div class="inline-doc" id="gimbalhandler_gimbalattituderangechangedpushevent_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">event </font>GimbalAttitudeRangeChangedEventHandler</h6></div>
+<div class="api-row" id="gimbalhandler_gimbalattituderangechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_gimbalattituderangechangedpushevent_inline">GimbalAttitudeRangeChanged</a></div></div><div class="inline-doc" id="gimbalhandler_gimbalattituderangechangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>GimbalAttitudeRangeChanged</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> GimbalAttitudeRangeChangedEventHandler GimbalAttitudeRangeChanged</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v28">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the gimbal's valid attitude range.</font></p>
 </div>
-<div class="api-row" id="gimbalhandler_gimbalcalibrationstatechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_gimbalcalibrationstatechangedpushevent_inline">GimbalCalibrationStateChangedEventHandler</a></div></div><div class="inline-doc" id="gimbalhandler_gimbalcalibrationstatechangedpushevent_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">event </font>GimbalCalibrationStateChangedEventHandler</h6></div>
+<div class="api-row" id="gimbalhandler_gimbalcalibrationstatechangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_gimbalcalibrationstatechangedpushevent_inline">GimbalCalibrationStateChanged</a></div></div><div class="inline-doc" id="gimbalhandler_gimbalcalibrationstatechangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>GimbalCalibrationStateChanged</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> GimbalCalibrationStateChangedEventHandler GimbalCalibrationStateChanged</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v29">Description:</h5>
 <p><font color="#666">Subscribe the event to receive changes of the gimbal's calibration state.</font></p>
 </div>
-<div class="api-row" id="gimbalhandler_connectionchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_connectionchangedpushevent_inline">BoolMsgChangedEventHandler</a></div></div><div class="inline-doc" id="gimbalhandler_connectionchangedpushevent_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">event </font>BoolMsgChangedEventHandler</h6></div>
+<div class="api-row" id="gimbalhandler_connectionchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_connectionchangedpushevent_inline">ConnectionChanged</a></div></div><div class="inline-doc" id="gimbalhandler_connectionchangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>ConnectionChanged</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> BoolMsgChangedEventHandler ConnectionChanged</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
 <h5 id="description-v30">Description:</h5>
 <p><font color="#666">Subscribe the event to receive a component's connection change.</font></p>
 </div>
-<div class="api-row" id="gimbalhandler_serialnumberchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_serialnumberchangedpushevent_inline">StringMsgChangedEventHandler</a></div></div><div class="inline-doc" id="gimbalhandler_serialnumberchangedpushevent_inline" <blockquote="">
-<div class="article"><h6><font color="#AAA">event </font>StringMsgChangedEventHandler</h6></div>
+<div class="api-row" id="gimbalhandler_serialnumberchangedpushevent"><div class="api-col left"></div><div class="api-col middle" style="color:#AAA">event</div><div class="api-col right"><a class="trigger" href="#gimbalhandler_serialnumberchangedpushevent_inline">SerialNumberChanged</a></div></div><div class="inline-doc" id="gimbalhandler_serialnumberchangedpushevent_inline" <blockquote="">
+<div class="article"><h6><font color="#AAA">event </font>SerialNumberChanged</h6></div>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">event</span> StringMsgChangedEventHandler SerialNumberChanged</span><br></pre></td></tr></table></figure>
 <html><table class="table-supportedby"><tr valign="top"><td width="15%"><font color="#999"><i>Declaration:</i></font></td><td width="85%"><font color="#999">DJI.WindowsSDK.Components</font></td></tr></table></html>
