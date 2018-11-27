@@ -92,4 +92,3 @@ The Panorama Mission rotates the camera 180 or 360 degrees while taking photos w
 The Panorama Mission is only supported on OSMO. 
 
 
-

@@ -83,6 +83,7 @@ The mobile device connects to a DJI product either wirelessly with WiFi or throu
 
 <html>
 
+
 <table class="table-pictures">
   <tr>
     <td><img src="../../images/windows-sdk-introduction/ConnectionUSB.png"></td>

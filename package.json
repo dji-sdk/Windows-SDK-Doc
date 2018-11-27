@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.2.0"
+    "version": "3.2.2"
   },
   "scripts": {
     "hexo": "rm db.json; node ./node_modules/hexo/bin/hexo generate",
@@ -11,18 +11,8 @@
     "search": "node ./search.js"
   },
   "dependencies": {
-    "co": "^4.6.0",
-    "hexo": "^3.2.0",
-    "hexo-renderer-markdown-it": "^3.4.1",
-    "hexo-renderer-sass": "^0.2.0",
-    "hexo-server": "^0.2.0",
-    "html-to-text": "^2.1.3",
-    "jade": "^1.11.0",
-    "js-yaml": "^3.6.1",
-    "node-fetch": "^1.6.0",
-    "requestify": "^0.1.17",
-    "whatwg-fetch": "^1.0.0",
     "ali-oss": "^4.4.4",
+    "co": "^4.6.0",
     "del": "^2.2.1",
     "glob": "^7.0.5",
     "gulp": "^3.9.1",
@@ -33,10 +23,20 @@
     "gulp-rev-replace": "^0.4.3",
     "gulp-useref": "^3.0.8",
     "gulp-util": "^3.0.7",
+    "hexo": "~3.2.0",
+    "hexo-renderer-markdown-it": "^3.4.1",
+    "hexo-renderer-sass": "^0.2.0",
+    "hexo-server": "^0.2.0",
+    "html-to-text": "^2.1.3",
+    "jade": "^1.11.0",
+    "js-yaml": "^3.6.1",
     "markdown-it": "^7.0.0",
     "marky-mark": "^1.2.1",
     "mime": "^1.3.4",
+    "node-fetch": "^1.6.0",
+    "requestify": "^0.1.17",
     "run-sequence": "^1.1.5",
-    "through2": "^2.0.1"
+    "through2": "^2.0.1",
+    "whatwg-fetch": "^1.0.0"
   }
 }

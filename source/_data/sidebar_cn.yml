@@ -4,18 +4,12 @@
     -
       title: "Documentation Introduction"
       path: "/cn/introduction/index.html"
-    -
-      title: "Windows SDK Introduction"
-      path: "/cn/introduction/windows_sdk_introduction.html"
-    -
-      title: "SDK Architectural Overview"
-      path: "/cn/introduction/sdk_architectural_overview.html"
--
-  title: "Get Started Immediately"
-  list:
-    -
-      title: "Run Sample Application"
-      path: "/cn/quick-start/index.html"
+# -
+#   title: "Get Started Immediately"
+#   list:
+#     -
+#       title: "Run Sample Application"
+#       path: "/cn/quick-start/index.html"
 -
   title: "CONCEPTS TO UNDERSTAND"
   list:
@@ -25,34 +19,6 @@
     -
       title: "Camera Exposure"
       path: "/cn/introduction/camera_concepts.html"
--
-  title: "GUIDES"
-
-  list:
-    -
-      title: "Flight Controller"
-      path: "/cn/introduction/component-guide-flightController.html"
-    -
-      title: "Camera"
-      path: "/cn/introduction/component-guide-camera.html"
-    -
-      title: "Gimbal"
-      path: "/cn/introduction/component-guide-gimbal.html"
-    -
-      title: "AirLink"
-      path: "/cn/introduction/component-guide-airlink.html"
-    -
-      title: "Remote Controller"
-      path: "/cn/introduction/component-guide-remotecontroller.html"
-    -
-      title: "Smart Battery"
-      path: "/cn/introduction/component-guide-battery.html"
-    -
-      title: "Missions"
-      path: "/cn/introduction/component-guide-missions.html"
-    -
-      title: "SDK Manager"
-      path: "/cn/introduction/sdk-guide-sdkmanager.html"
 -
   title: "DEVELOPMENT WORKFLOW"
   list:
@@ -65,15 +31,6 @@
     -
       title: "Integrate SDK into Application"
       path: "/cn/application-development-workflow/workflow-integrate.html"
-    -
-      title: "Run Application"
-      path: "/cn/application-development-workflow/workflow-run.html"
-    -
-      title: "Testing, Profiling & Debugging"
-      path: "/cn/application-development-workflow/workflow-testing.html"
-    -
-      title: "Deploy"
-      path: "/cn/application-development-workflow/workflow-deploy.html"
 -
   title: "TUTORIALS"
   list:

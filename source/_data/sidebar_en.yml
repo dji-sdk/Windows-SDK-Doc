@@ -4,18 +4,12 @@
     -
       title: "Documentation Introduction"
       path: "/introduction/index.html"
-    -
-      title: "Windows SDK Introduction"
-      path: "/introduction/windows_sdk_introduction.html"
-    -
-      title: "SDK Architectural Overview"
-      path: "/introduction/sdk_architectural_overview.html"
--
-  title: "Get Started Immediately"
-  list:
-    -
-      title: "Run Sample Application"
-      path: "/quick-start/index.html"
+# -
+#   title: "Get Started Immediately"
+#   list:
+#     -
+#       title: "Run Sample Application"
+#       path: "/quick-start/index.html"
 -
   title: "CONCEPTS TO UNDERSTAND"
   list:
@@ -25,34 +19,6 @@
     -
       title: "Camera Exposure"
       path: "/introduction/camera_concepts.html"
--
-  title: "GUIDES"
-
-  list:
-    -
-      title: "Flight Controller"
-      path: "/introduction/component-guide-flightController.html"
-    -
-      title: "Camera"
-      path: "/introduction/component-guide-camera.html"
-    -
-      title: "Gimbal"
-      path: "/introduction/component-guide-gimbal.html"
-    -
-      title: "AirLink"
-      path: "/introduction/component-guide-airlink.html"
-    -
-      title: "Remote Controller"
-      path: "/introduction/component-guide-remotecontroller.html"
-    -
-      title: "Smart Battery"
-      path: "/introduction/component-guide-battery.html"
-    -
-      title: "Missions"
-      path: "/introduction/component-guide-missions.html"
-    -
-      title: "SDK Manager"
-      path: "/introduction/sdk-guide-sdkmanager.html"
 -
   title: "DEVELOPMENT WORKFLOW"
   list:
@@ -65,15 +31,6 @@
     -
       title: "Integrate SDK into Application"
       path: "/application-development-workflow/workflow-integrate.html"
-    -
-      title: "Run Application"
-      path: "/application-development-workflow/workflow-run.html"
-    -
-      title: "Testing, Profiling & Debugging"
-      path: "/application-development-workflow/workflow-testing.html"
-    -
-      title: "Deploy"
-      path: "/application-development-workflow/workflow-deploy.html"
 -
   title: "TUTORIALS"
   list:

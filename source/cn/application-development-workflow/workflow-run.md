@@ -109,3 +109,4 @@ _Osmo, Mavic Pro, Spark:_
 1. Turn on the product (Osmo or aircraft).  
 * Connect Mobile Device to the WiFi network created by the product.
 * Run Application on Mobile Device.
+
