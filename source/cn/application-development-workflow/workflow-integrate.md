@@ -1,6 +1,6 @@
 ---
 title: Integrate WSDK into Application
-date: 2018-10-30
+date: 2018-11-27
 keywords: [Visual Studio project integration, import WSDK]
 ---
 

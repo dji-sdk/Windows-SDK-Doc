@@ -1,7 +1,7 @@
 ---
 title: Integrate DJIVideoParser Project into DJI Windows SDK Application
-version: v4.8
-date: 2018-10-30
+version: v0.1.0
+date: 2018-11-27
 github: https://github.com/DJI-Mobile-SDK-Tutorials/iOS-FPVDemo
 keywords: [Windows SDK, FPVDemo, basic tutorial]
 ---

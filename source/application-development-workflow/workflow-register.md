@@ -1,6 +1,6 @@
 ---
 title: Register as a DJI Developer & Download SDK
-date: 2018-09-04
+date: 2018-11-27
 keywords: [register, download sdk]
 ---
 
