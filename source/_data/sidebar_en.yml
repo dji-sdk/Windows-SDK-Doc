@@ -10,15 +10,15 @@
 #     -
 #       title: "Run Sample Application"
 #       path: "/quick-start/index.html"
--
-  title: "CONCEPTS TO UNDERSTAND"
-  list:
-    -
-      title: "Flight Control"
-      path: "/introduction/flightController_concepts.html"
-    -
-      title: "Camera Exposure"
-      path: "/introduction/camera_concepts.html"
+# -
+#   title: "CONCEPTS TO UNDERSTAND"
+#   list:
+#     -
+#       title: "Flight Control"
+#       path: "/introduction/flightController_concepts.html"
+#     -
+#       title: "Camera Exposure"
+#       path: "/introduction/camera_concepts.html"
 -
   title: "DEVELOPMENT WORKFLOW"
   list:

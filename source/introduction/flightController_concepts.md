@@ -6,7 +6,7 @@ keywords: [coordinate system, body coordinate system, ground coordinate system, 
 
 ## Coordinate Systems
 
-Description of aircraft movement is dependent on the location and orientation of coordinate axes that make a coordinate system (or frame of reference). Many coordinate systems exist, but the two used in the DJI Mobile SDK are relative to the aircraft body (body frame), and relative to the ground (world frame).
+Description of aircraft movement is dependent on the location and orientation of coordinate axes that make a coordinate system (or frame of reference). Many coordinate systems exist, but the two used in the DJI Windows SDK are relative to the aircraft body (body frame), and relative to the ground (world frame).
 
 ### Body Coordinate System
 
@@ -46,7 +46,7 @@ Combined with **throttle**, rotating the aircraft in pitch, roll and yaw orients
 
 The above diagram shows the aircraft from the side. Pitch measures an object's rotation about the lateral (Y, pitch) axis. Adjusting the pitch will tilt the aircraft forwards or backwards.
 
-To pitch forward, the back propellors spin faster and have more thrust than the front propellors. The flight controller automatically balances the thrust on each propellor and so the DJI Mobile SDK simply provides APIs to adjust the pitch angle and throttle.
+To pitch forward, the back propellors spin faster and have more thrust than the front propellors. The flight controller automatically balances the thrust on each propellor and so the DJI Windows SDK simply provides APIs to adjust the pitch angle and throttle.
 
 ### Roll
 
@@ -54,7 +54,7 @@ To pitch forward, the back propellors spin faster and have more thrust than the 
 
 The above diagram shows the aircraft from the back. Roll measures an object's rotation about the longitudinal (X, roll) axis. Adjusting the roll will tilt the aircraft left or right.
 
-To roll left, the right propellors spin faster and have more thrust than the left propellors. The DJI Mobile SDK provides APIs to adjust the roll angle and velocity to achieve movement.
+To roll left, the right propellors spin faster and have more thrust than the left propellors. The DJI Windows SDK provides APIs to adjust the roll angle and velocity to achieve movement.
 
 ### Yaw
 
@@ -72,7 +72,7 @@ Throttle controls the aircraft's average thrust from its propulsion system. When
 
 ## IOC (Intelligent Orientation Control)
 
-IOC (referred to as Flight Orientation Mode in the Mobile SDK) defines how the aircraft will interpret horizontal flight commands (forward, backward, left and right).
+IOC (referred to as Flight Orientation Mode in the Windows SDK) defines how the aircraft will interpret horizontal flight commands (forward, backward, left and right).
 
 By default, the aircraft will fly relative to itself, so a left command causes the aircraft to fly to its left. This makes sense if an aircraft is being piloted from the first person view. However, when the aircraft is being piloted remotely from a fixed location it can be confusing or inconvenient.
 
