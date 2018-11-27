@@ -120,4 +120,4 @@ private void Instance_SDKRegistrationEvent(SDKRegistrationState state, SDKError 
 
 As this application is only checking for registration and not interacting directly with a product, no product needs to be connected to the application for this to run. The application will need internet connectivity to perform registration successfully.
 
-If the App Key was generated correctly and the windows 10 device has internet connectivity, then the following log should be seen in output window: **Register app succfully.**
+If the App Key was generated correctly and the windows 10 device has internet connectivity, then the following log should be seen in the output window: **Register app successfully.**
