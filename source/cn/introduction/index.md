@@ -14,11 +14,15 @@ From registering as a developer, to deploying an application, this section will 
 * [Register as a DJI Developer & Download SDK](../application-development-workflow/workflow-register.html)
 * [Integrate SDK into Application](../application-development-workflow/workflow-integrate.html)
 
+### Get Started Immediately
+
+Developers can [Run the Sample Application](../quick-start/index.html), to see how the DJI Windows SDK can be used.
+
 ### Tutorials
 
 Tutorials are provided as examples on how to use the Windows SDK for different applications.
 
-* [Camera Application](../application-development-workflow/workflow-FPV.html)
+* [Camera Application](../tutorials/index.html)
 
 ### FAQ
 

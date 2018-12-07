@@ -32,6 +32,13 @@
       title: "Integrate SDK into Application"
       path: "/cn/application-development-workflow/workflow-integrate.html"
 -
+  title: "GET STARTED IMMEDIATELY"
+  list:
+    -
+      title: "Run Sample Application"
+      path: "/cn/quick-start/index.html"
+
+-
   title: "TUTORIALS"
   list:
     -

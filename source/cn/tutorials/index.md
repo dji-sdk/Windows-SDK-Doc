@@ -1,7 +1,7 @@
 ---
 title: Integrate DJIVideoParser Project into DJI Windows SDK Application
 version: v0.1.0
-date: 2018-11-27
+date: 2018-12-07
 github: https://github.com/DJI-Mobile-SDK-Tutorials/iOS-FPVDemo
 keywords: [Windows SDK, FPVDemo, basic tutorial]
 ---
@@ -30,12 +30,10 @@ Based on the DJIWSDKDemo, now we start to import DJIVideoParser project.
   * b. Pay attention to following points: **Configuration, Platform, Target Platform Version** and **Output Directory**.
   ![VideoParserProject](../../images/quick-start/WSDKDJIVideoParserConfig.png)
 * Fourthly, add reference to DJIWSDKDemo.
-  * a. Build DJIVideoParser project. Pay attention to the product after building.
-  * b. Right-click on DJIWSDKDemo project, and select **Add Reference**, and then click **Browse**.
-  * c. Locate to the folder where DJIVideoParser.winmd was generated above. Select it and click **Add**.
-  ![VideoParserProject](../../images/quick-start/WSDKDJIVideoParserWinmdLocate.png)
-  * d. Check the box of DJIVideoParser.winmd and click **OK**.(You don't need to check the box of DJIWindowsSDK.dll if you have added it before.)
-  ![VideoParserProject](../../images/quick-start/WSDKDJIVideoParserWinmdAdd.png)
+  * a. Right-click on DJIWSDKDemo project, and select **Add Reference**, and then click **Projects**.
+  * b. Check the box before DJIVideoParser project.
+  ![VideoParserProject](../../images/quick-start/WSDKAddVideoParserReference.png)
+  * Click **OK**.
 * Finally, copy FFMpeg dlls to DJIWSDKDemo project.
   * a. Right-click on the DJIWSDKDemo project. Select **Add->Existing Item**.
   * b. Locate to dlls of FFMpeg(under the folder of /DJIVideoParser/ThirdParties/dlls).
@@ -86,6 +84,10 @@ async void ReceiveDecodedData(byte[] data, int width, int height)
         }
         else
         {
+        	  if (data.Length != decodedDataBuf.Length)
+            {
+            		Arrat.Resize(ref decodedDataBuf, data.Length)
+            }
             data.CopyTo(decodedDataBuf.AsBuffer());
         }
     }
@@ -126,9 +128,134 @@ Please check this [Connect Mobile Device and Run Application](../application-dev
 
 Run the demo now. If you can see the live video stream in the application, congratulations!
 
-  ![fpv](../../images/quick-start/WSDKDemoResult.png)
+  ![fpv](../../images/quick-start/WSDKFPVDemoCapture.png)
+  
+  
+## Shoot Photo And Record Video
 
-### Summary
+### Camera Work Mode
+Before we can shoot photo or record video, we need to know the work mode of camera. There are serval types of [camera work mode](https://developer.dji.com/api-reference/windows-api/Components/CameraHandler.html?search=camerawork&i=3&#value_cameraworkmode_inline). We can shoot photo and start record video when the camera work modes are **SHOOT_PHOTO** and **RECORD_VIDEO**, respectively.
+
+### Display and Switch Camera Mode
+* Display Camera Mode
+
+  When we set a work mode to camera, we can add camera work mode change event to constantly display the current camera mode. We can add a TextBlock named "ModeTB" to display the camera work mode.
+
+~~~csharp
+DJISDKManager.Instance.ComponentManager.GetCameraHandler(0, 0).CameraWorkModeChanged += async delegate (object sender, CameraWorkModeMsg? value)
+{
+    await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, async () =>
+    {
+         if (value != null)
+         {
+             ModeTB.Text = value.Value.value.ToString();
+         }
+    });
+};
+~~~
+
+* Switch camera mode
+
+  Before shooting photo or recording video, we need to switch camera mode to a proper work mode. Add a method named SetCameraWorkMode to implement camera mode switching, the implementation of the method is shown as following:
+  
+~~~csharp
+private async void SetCameraWorkMode(CameraWorkMode mode)
+{
+    if (DJISDKManager.Instance.ComponentManager != null)
+    {
+        CameraWorkModeMsg workMode = new CameraWorkModeMsg
+        {
+            value = mode,
+        };
+        var retCode = await DJISDKManager.Instance.ComponentManager.GetCameraHandler(0, 0).SetCameraWorkModeAsync(workMode);
+        if (retCode != SDKError.NO_ERROR)
+        {
+            OutputTB.Text = "Set camera work mode to " + mode.ToString() + "failed, result code is " + retCode.ToString();
+        }
+    }
+    else
+    {
+        OutputTB.Text = "SDK hasn't been activated yet.";
+    }
+}
+~~~
+
+### Shoot Photo and Record Video
+Before shooting photo or recording video, we need to switch the camera work mode to the proper mode.
+
+* Shoot Photo
+  
+  Add a button named "StartShootPhoto", and implement the click method of it as shown below:
+  
+~~~csharp
+private async void StartRecordVideo_Click(object sender, RoutedEventArgs e)
+{
+    if (DJISDKManager.Instance.ComponentManager != null)
+    {
+        var retCode = await DJISDKManager.Instance.ComponentManager.GetCameraHandler(0, 0).StartRecordAsync();
+        if (retCode != SDKError.NO_ERROR)
+        {
+            OutputTB.Text = "Failed to record video, result code is " + retCode.ToString();
+        }
+        else
+        {
+            OutputTB.Text = "Record video successfully";
+        }
+    }
+    else
+    {
+        OutputTB.Text = "SDK hasn't been activated yet.";
+    }
+}
+~~~
+
+* Listen Video Record Time
+	
+	  When we record video, we need to know the record time of video. The following code can help you the get the record time constantly.
+	   
+~~~csharp
+//listen video record time
+DJISDKManager.Instance.ComponentManager.GetCameraHandler(0, 0).RecordingTimeChanged += async delegate (object sender, IntMsg? value)
+{
+    await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, async () =>
+                              {
+                                  if (value != null)
+                                  {
+                                      RecordTimeTB.Text = value.Value.value.ToString();
+                                  }
+                              });
+};
+~~~
+
+* Record Video
+   	 
+   	 Add a button named "StartRecordVideo", and implement the click method of it as shown below:
+   	 
+~~~csharp
+private async void StartRecordVideo_Click(object sender, RoutedEventArgs e)
+{
+    if (DJISDKManager.Instance.ComponentManager != null)
+    {
+        var retCode = await DJISDKManager.Instance.ComponentManager.GetCameraHandler(0, 0).StartRecordAsync();
+        if (retCode != SDKError.NO_ERROR)
+        {
+            OutputTB.Text = "Failed to record video, result code is " + retCode.ToString();
+        }
+        else
+        {
+            OutputTB.Text = "Record video successfully";
+        }
+    }
+    else
+    {
+        OutputTB.Text = "SDK hasn't been activated yet.";
+    }
+}
+~~~   	 
+
+* Display Result
+![video](../../images/quick-start/WSDFPVDemoRecord.png)
+## Summary
    
-   In this tutorial, you’ve learned how to use DJI Windows SDK to show the FPV View from the aircraft's camera. These are the most basic and common features in a typical drone app. However, if you want to create a drone app which is more fancy, you still have a long way to go. More advanced features should be implemented, including previewing the photo and video in the SD Card, showing the OSD data of the aircraft and so on. Hope you enjoy this tutorial, and stay tuned for our next one!
+   In this tutorial, you’ve learned how to use DJI Windows SDK to show the FPV View from the aircraft's camera and control. These are the most basic and common features in a typical drone app. However, if you want to create a drone app which is more fancy, you still have a long way to go. More advanced features should be implemented, including previewing the photo and video in the SD Card, showing the OSD data of the aircraft and so on. Hope you enjoy this tutorial, and stay tuned for our next one!
    
