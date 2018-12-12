@@ -1,8 +1,8 @@
 ---
 title: Integrate DJIVideoParser Project into DJI Windows SDK Application
 version: v0.1.0
-date: 2018-12-07
-github: https://github.com/DJI-Mobile-SDK-Tutorials/iOS-FPVDemo
+date: 2018-12-12
+github: https://github.com/DJI-Windows-SDK-Tutorials/Windows-FPVDemo
 keywords: [Windows SDK, FPVDemo, basic tutorial]
 ---
 
@@ -12,7 +12,7 @@ keywords: [Windows SDK, FPVDemo, basic tutorial]
 
 This tutorial is designed for you to gain a basic understanding of the DJI Windows SDK. It will implement the FPV view.
 
-You can download the tutorial's final sample project from this [Github Page](https://github.com/DJI-Mobile-SDK-Tutorials/iOS-FPVDemo).
+You can download the tutorial's final sample project from this [Github Page](https://github.com/DJI-Windows-SDK-Tutorials/Windows-FPVDemo).
    
 We use Phantom 4 Pro V2.0 as an example to make this demo.
 
@@ -119,14 +119,10 @@ if (videoParser == null)
     DJISDKManager.Instance.VideoFeeder.GetPrimaryVideoFeed(0).VideoDataUpdated += OnVideoPush;
 }
 ~~~
-
-## Connecting to the Aircraft
-
-Please check this [Connect Mobile Device and Run Application](../application-development-workflow/workflow-run.html#connect-mobile-device-and-run-application) guide to run the application and view the live video stream from your DJI product's camera based on what we've finished of the application so far!
   
 ## Enjoying the First Person View
 
-Run the demo now. If you can see the live video stream in the application, congratulations!
+Run the demo now and connect your PC to the Remote Controller of the aircraft. If you can see the live video stream in the application, congratulations!
 
   ![fpv](../images/quick-start/WSDKFPVDemoCapture.png)
   
