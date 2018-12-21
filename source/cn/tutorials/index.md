@@ -78,7 +78,7 @@ async void ReceiveDecodedData(byte[] data, int width, int height)
         {
         	  if (data.Length != decodedDataBuf.Length)
             {
-            		Arrat.Resize(ref decodedDataBuf, data.Length)
+            		Array.Resize(ref decodedDataBuf, data.Length)
             }
             data.CopyTo(decodedDataBuf.AsBuffer());
         }
