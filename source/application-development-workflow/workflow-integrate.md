@@ -1,6 +1,6 @@
 ---
 title: Integrate WSDK into Application
-date: 2018-12-07
+date: 2018-12-24
 keywords: [Visual Studio project integration, import WSDK]
 ---
 
@@ -78,7 +78,7 @@ public MainPage()
     DJISDKManager.Instance.RegisterApp("app key");
 }
 
-private void Instance_SDKRegistrationEvent(SDKRegistrationState state, SDKError resultCode)
+private async void Instance_SDKRegistrationEvent(SDKRegistrationState state, SDKError resultCode)
 {
     if (resultCode == SDKError.NO_ERROR)
     {
@@ -120,4 +120,4 @@ private void Instance_SDKRegistrationEvent(SDKRegistrationState state, SDKError 
 
 As this application is only checking for registration and not interacting directly with a product, no product needs to be connected to the application for this to run. The application will need internet connectivity to perform registration successfully.
 
-If the App Key was generated correctly and the windows 10 device has internet connectivity, then the following log should be seen in output window: **Register app successfully.**
+If the App Key was generated correctly and the windows 10 device has internet connectivity, then the following log should be seen in output window: **Register app succfully.**
