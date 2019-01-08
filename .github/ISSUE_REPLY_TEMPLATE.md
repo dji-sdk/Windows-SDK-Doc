@@ -2,7 +2,7 @@ Hi, there are two options for you to ask for help:
 
 1. Post your issues on StackOverflow: <https://stackoverflow.com/questions/tagged/dji-sdk>, the community can help you.
 
-2. Report your issues to <dev@dji.com>, as it's our official channel for developers to request DJI SDK support now.
+2. Report your issues to <dev@dji.com>, as it's our official channel for developers to request DJI Developer Support now.
  
 For DJI Developer Support, we have the following three tiers:
  
