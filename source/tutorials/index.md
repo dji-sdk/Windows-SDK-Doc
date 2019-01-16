@@ -1,7 +1,7 @@
 ---
 title: Integrate DJIVideoParser Project into DJI Windows SDK Application
-version: v0.1.0
-date: 2019-01-07
+version: v0.2.0
+date: 2019-01-16
 github: https://github.com/DJI-Windows-SDK-Tutorials/Windows-FPVDemo
 keywords: [Windows SDK, FPVDemo, basic tutorial]
 ---
@@ -43,62 +43,54 @@ If you are not familiar with the process of integrating and activating DJI Windo
 
 ## Implementing the First Person View
 
-  * **1**. Add FPV image view. Double-click on the **MainPage.xaml** to open it. We can see there is a **Grid** declaration. Add an **Image** element named "FPVImage" inside it.
-  ![FPV](../images/quick-start/WSDKXaml.png)
+  * **1**. Add FPV view. Double-click on the **MainPage.xaml** to open it. We can see there is a **Grid** declaration. Add an **SwapChainPanel** element named "swapChainPanel" inside it.
+
+~~~csharp
+    <Grid x:Name="MainGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <SwapChainPanel x:Name="swapChainPanel"/>
+    </Grid>
+~~~
+
   * **2**. Add video data parser and container. Double-click on the **MainPage.xaml.cs** to open it. Add the following elements in the **MainPage** class file.
 
 ~~~csharp
 //use videoParser to decode raw data.
 private DJIVideoParser.Parser videoParser;
-//decoded data container
-private byte[] decodedDataBuf;
-//FPV image source
-private WriteableBitmap VideoSource;
-//multi-thread protect
-private object bufLock = new object();
 ~~~
 
-  * **3**. Add video raw data and decoded data callback. Add the following methods in the **MainPage** class file.
+  * **3**. Add video raw data callback, decoded data callback and camera type callback. Add the following methods in the **MainPage** class file.
 
 ~~~csharp
 //raw data
-void OnVideoPush(VideoFeed sender, [ReadOnlyArray] ref byte[] bytes)
+void OnVideoPush(VideoFeed sender, byte[] bytes)
 {
     videoParser.PushVideoData(0, 0, bytes, bytes.Length);
 }
 
-//decode data
+//Decode data. Do nothing here. This function would return a bytes array with image data in RGBA format.
 async void ReceiveDecodedData(byte[] data, int width, int height)
 {
-    lock (bufLock)
+}
+
+//We need to set the camera type of the aircraft to the DJIVideoParser. After setting camera type, DJIVideoParser would correct the distortion of the video automatically.
+private void OnCameraTypeChanged(object sender, CameraTypeMsg? value)
+{
+    if(value != null)
     {
-        if (decodedDataBuf == null)
+        switch (value.Value.value)
         {
-            decodedDataBuf = data;
-        }
-        else
-        {
-        	  if (data.Length != decodedDataBuf.Length)
-            {
-            		Array.Resize(ref decodedDataBuf, data.Length);
-            }
-            data.CopyTo(decodedDataBuf.AsBuffer());
-        }
-    }
-    await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
-    {
-        if (VideoSource == null || VideoSource.PixelWidth != width || VideoSource.PixelHeight != height)
-        {
-            VideoSource = new WriteableBitmap((int)width, (int)height);
-            FPVImage.Source = VideoSource;
+            case CameraType.MAVIC_2_ZOOM:
+                this.videoParser.SetCameraSensor(AircraftCameraType.Mavic2Zoom);
+                break;
+            case CameraType.MAVIC_2_PRO:
+                this.videoParser.SetCameraSensor(AircraftCameraType.Mavic2Pro);
+                break;
+            default:
+                this.videoParser.SetCameraSensor(AircraftCameraType.Others);
+                break;
         }
 
-        lock (bufLock)
-        {
-            decodedDataBuf.AsBuffer().CopyTo(VideoSource.PixelBuffer);
-        }
-        VideoSource.Invalidate();
-    });
+    }
 }
 ~~~
 
@@ -110,16 +102,29 @@ private async void Instance_SDKRegistrationEvent(SDKRegistrationState state, SDK
 {
     if (resultCode == SDKError.NO_ERROR)
     {
-      System.Diagnostics.Debug.WriteLine("Register app successfully.");
+        System.Diagnostics.Debug.WriteLine("Register app successfully.");
 
-      //Raw data and decoded data listener
-      if (videoParser == null)
-      {
-          videoParser = new DJIVideoParser.Parser();
-          videoParser.Initialize();
-          videoParser.SetVideoDataCallack(0, 0, ReceiveDecodedData);
-          DJISDKManager.Instance.VideoFeeder.GetPrimaryVideoFeed(0).VideoDataUpdated += OnVideoPush;
-      }
+        //Must in UI Thread
+        await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, async () =>
+        {
+            //Raw data and decoded data listener
+            if (videoParser == null)
+            {
+                videoParser = new DJIVideoParser.Parser();
+                videoParser.Initialize(delegate (byte[]data)
+                {
+                    //Note: This function must be called because we need DJI Windows SDK to help us to parse frame data.
+                    return DJISDKManager.Instance.VideoFeeder.ParseAssitantDecodingInfo(0, data);
+                });
+                //Set the swapChainPanel to display and set the decoded data callback.
+                videoParser.SetSurfaceAndVideoCallback(0, 0, swapChainPanel, ReceiveDecodedData);
+                DJISDKManager.Instance.VideoFeeder.GetPrimaryVideoFeed(0).VideoDataUpdated += OnVideoPush;
+            }
+            //get the camera type and observe the CameraTypeChanged event.
+            DJISDKManager.Instance.ComponentManager.GetCameraHandler(0, 0).CameraTypeChanged += OnCameraTypeChanged;
+            var type = await DJISDKManager.Instance.ComponentManager.GetCameraHandler(0, 0).GetCameraTypeAsync();
+            OnCameraTypeChanged(this, type.value);
+        });
     }
     else
     {
@@ -128,6 +133,7 @@ private async void Instance_SDKRegistrationEvent(SDKRegistrationState state, SDK
     }
 }
 ~~~
+
   
 ## Enjoying the First Person View
 

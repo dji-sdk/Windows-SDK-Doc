@@ -44,6 +44,23 @@
     -
       title: "Camera Application"
       path: "/cn/tutorials/index.html"
+
+-
+  title: "PRODUCT CONNECTION GUIDES"
+  list:
+    -
+      title: "Mavic Air"
+      path: "/cn/connection/MavicAir.html"
+    -
+      title: "Mavic 2 Zoom/Pro"
+      path: "/cn/connection/Mavic2.html"
+    -
+      title: "Phantom 4 Pro V2.0"
+      path: "/cn/connection/P4PV2.html"
+    -
+      title: "Phantom 4 Pro+ V2.0"
+      path: "/cn/connection/P4PV2_plus.html"
+     
 -
   title: "Support"
   list:
