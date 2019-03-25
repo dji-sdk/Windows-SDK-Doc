@@ -1,6 +1,6 @@
 ---
 title: Integrate WSDK into Application
-date: 2019-01-07
+date: 2019-03-25
 keywords: [Visual Studio project integration, import WSDK]
 ---
 
@@ -105,7 +105,7 @@ private async void Instance_SDKRegistrationEvent(SDKRegistrationState state, SDK
         {
             await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, async () =>
             {
-                if (value != null && value?.value != ProductType.NONE)
+                if (value != null && value?.value != ProductType.UNRECOGNIZED)
                 {
                     System.Diagnostics.Debug.WriteLine("The Aircraft is connected now.");
                     //You can load/display your pages according to the aircraft connection state here.
@@ -120,7 +120,7 @@ private async void Instance_SDKRegistrationEvent(SDKRegistrationState state, SDK
 
         //If you want to get the latest product connection state manually, you can use the following code
         var productType = (await DJISDKManager.Instance.ComponentManager.GetProductHandler(0).GetProductTypeAsync()).value;
-        if (productType != null && productType?.value != ProductType.NONE)
+        if (productType != null && productType?.value != ProductType.UNRECOGNIZED)
         {
             System.Diagnostics.Debug.WriteLine("The Aircraft is connected now.");
             //You can load/display your pages according to the aircraft connection state here.

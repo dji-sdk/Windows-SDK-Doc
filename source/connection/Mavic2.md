@@ -1,6 +1,6 @@
 ---
 title: Mavic 2 Pro/Zoom Connection Guidance
-date: 2019-01-16
+date: 2019-03-25
 keywords: [Windows SDK, Mavic 2]
 ---
 
@@ -11,7 +11,7 @@ keywords: [Windows SDK, Mavic 2]
 ## Preparation
 
 1. Mavic 2 aircraft and remote controller **in newest firmware version**. Use **DJI Go App** on mobile phone to check if your devices need updating.
-2. Windows SDK 0.2.0 or later.
+2. Windows SDK 0.3.0 or later.
 3. Micro-USB cable.
 
 ## DJI Assistant 2
