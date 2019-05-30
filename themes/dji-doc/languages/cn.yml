@@ -2,13 +2,11 @@ nav:
   sdk: "SDK"
   mobile_sdk: "Mobile SDK"
   onboard_sdk: "Onboard SDK"
-  guidance_sdk: "Guidance SDK"
   payload_sdk: "Payload SDK"
   ux_sdk: "UX SDK"
   windows-sdk: "Windows SDK"
   mobile-sdk: "Mobile SDK"
   onboard-sdk: "Onboard SDK"
-  guidance-sdk: "Guidance SDK"
   payload-sdk: "Payload SDK"
   products: "产品"
   info: "资讯"
@@ -50,7 +48,6 @@ policies:
 doc:
   search_holder: '搜索文档'
   search_title_mobile: '搜索 Mobile SDK 文档'
-  search_title_guidance: '搜索 Guidance SDK 文档'
   search_title_onboard: '搜索 Onboard SDK 文档'
   results: '搜索结果'
   notfound: '未找到结果'

@@ -2,13 +2,11 @@ nav:
   sdk: "SDK"
   mobile_sdk: "Mobile SDK"
   onboard_sdk: "Onboard SDK"
-  guidance_sdk: "Guidance SDK"
   payload_sdk: "Payload SDK"
   ux_sdk: "UX SDK"
   windows_sdk: "Windows SDK"
   mobile-sdk: "Mobile SDK"
   onboard-sdk: "Onboard SDK"
-  guidance-sdk: "Guidance SDK"
   payload-sdk: "Payload SDK"
   products: "Products"
   info: "Info"
@@ -50,7 +48,6 @@ policies:
 doc:
   search_holder: 'Search Documentation'
   search_title_mobile: 'Search Mobile SDK Document'
-  search_title_guidance: 'Search Guidance SDK Document'
   search_title_onboard: 'Search Onboard SDK Document'
   results: 'Results'
   notfound: 'Not Found'
